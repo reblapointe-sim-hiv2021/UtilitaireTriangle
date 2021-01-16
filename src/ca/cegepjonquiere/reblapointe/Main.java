@@ -22,12 +22,13 @@ public class Main {
 	    Triangle iso = Triangle.aPartirDeACA(Math.toRadians(25), 100, Math.toRadians(25));
         System.out.println(iso.description());
 
-        Triangle iso2 = iso;
+        Triangle iso2;
+        iso2 = iso;
         iso2.setCoteA(108);
         System.out.println(iso2.description());
 
-        Triangle equi = Triangle.aPartirDeAAC(Math.toRadians(60), Math.toRadians(60), 10);
-        System.out.println(equi.description());
+        Triangle equilateral = Triangle.aPartirDeAAC(Math.toRadians(60), Math.toRadians(60), 10);
+        System.out.println(equilateral.description());
 
         Triangle rec = Triangle.aPartirDeCAC(1, Math.toRadians(90), 1);
         System.out.println(rec.description());
@@ -59,58 +60,44 @@ public class Main {
 
 3. De quelle classe dépend-elle?
 
-4. Quel est le numéro de la première ligne du corps de Triangle?
+4. Quels sont les noms, types et accessibilités des attributs d'objets (non statique)?
 
-5. Quel est la numéro de la dernière ligne du corps de Triangle?
+5. Quels sont les noms, types et accessibilités des attributs de classe (statique)?
 
-6. Quels sont les noms des attributs d'objets (non statique)?
+6. Quels sont les noms de toutes les méthodes de classe (statique)?
 
-7. Quels sont les types des attributs d'objets (non statique)?
+7. Quel est le numéro de ligne où se trouve la signature de la méthode "description"?
 
-8. Quelle est l'accessibilité des attributs d'objets (non statique)?
+8. Quelle est la dernière ligne du corps de la méthode "description"?
 
-9. Quels sont les nom des attributs de classe (statique)?
+9. Quelle est la signature des constructeurs?
 
-10. Quels sont les noms de toutes les méthodes d'objets (non statique)?
+10. Parmi les méthodes, donnez le nom de tous les mutateurs?
 
-11. Quels sont les noms de toutes les méthodes de classe (statique)?
+11. Parmi les méthodes donnez le nom de tous les accesseurs?
 
-12. Quel est le numéro où se trouve la signature de la méthode "description"?
-
-13. Quelle est la dernière ligne du corps de la méthode "description"?
-
-14. Quelle est la signature des constructeurs?
-
-15. Parmi les méthodes, donnez le nom de tous les mutateurs?
-
-16. Parmi les méthodes donnez le nom de tous les accesseurs?
-
-17. Rédigez la documentation complète de "périmètre"
+12. Rédigez la documentation complète de "périmètre"
     Ses paramètres explicites :
     Son type de retour :
-    Les exceptions qu'elle lance (s'il y a lieu) :
     Une description courte de son rôle :
 
-18. Rédigez la documentation complète de "aPartirDeACA"
+13. Rédigez la documentation complète de "aPartirDeACA"
     Ses paramètres explicites :
     Son type de retour :
-    Les exceptions qu'elle lance (s'il y a lieu) :
     Une description courte de son rôle :
 
-19. Donnez la signature d'une méthode surchargée :
+14. Donnez la signature d'une méthode surchargée.
 
-20. Deux méthodes devraient être dans une autre classe. Elles n'ont pas rapport aux triangles, lesquelles?
+15. Deux méthodes devraient être dans une autre classe. Elles n'ont pas rapport aux triangles, lesquelles?
 
-23. Ajoutez la méthode "public double plusGrandCote()". Elle retourne la longueur du plus grand côté entre coteA, coteB
-    et coteC
+16. Combien d'objets de type Triangle sont-ils créés pendant l'exécution du main?
 
-24. Combien de méthodes de Triangle différentes sont-elles appelées dans le main?
+17. Combien de variables de type Triangle sont-elles déclarées dans main?
 
-25. Combien d'objets de type Triangle sont-ils créés pendant l'exécution du main?
+18. Combien de fois main appelle-t-elle un constructeur de Triangle?
 
-26. Combien de variables de type Triangle sont-elles déclarées dans main?
-
-27. Combien de fois main appelle-t-elle un constructeur de Triangle?
+19.	Programmez la fonction
+    double hauteurA() // Retourne la hauteur au-dessus du cote a
 
 ----- Défis (facultatif) ------
 
@@ -124,12 +111,6 @@ C. Modifiez la méthode "public boolean estEgal(Triangle t)"  pour qu'elle retou
    permutation des côtés de t.
 
 D. Ajoutez la méthode "public boolean estSemblable(Triangle t)" qui retourne vrai si le triangle est égal à t ou une
-   homotétie de t.
-
-E. Modifiez la classe Triangle pour qu'en tout temps, coteC soit le plus long côté. Pour ce faire, programmez et
-   utilisez la méthode "private void arranger()" qui effectue une permutation des côtés a, b et/ou c afin de mettre le
-   plus long côté dans c.
-
------ Au prochain cours (vendredi) : Programmation de tests automatisés. ------
+   homothétie de t.
 
 */
