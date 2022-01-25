@@ -55,49 +55,71 @@ public class Main {
 ----- Répondez aux questions suivantes à propos de la classe Triangle... -------
 
 1. Quel est son nom?
+Triangle
 
 2. Quelle est son accessibilité?
+public
 
 3. De quelle classe dépend-elle?
+java.text.DecimalFormat, java.lang.Math
 
 4. Quels sont les noms, types et accessibilités des attributs d'objets (non statique)?
+coteA, coteB, coteC, tous des double, tous private
 
 5. Quels sont les noms, types et accessibilités des attributs de classe (statique)?
+PRECISION, type double, accessibilité private
 
 6. Quels sont les noms de toutes les méthodes de classe (statique)?
+aPartirDeACA, AAC et CAC
 
 7. Quel est le numéro de ligne où se trouve la signature de la méthode "description"?
+148
 
 8. Quelle est la dernière ligne du corps de la méthode "description"?
+150, 157 ou 158
 
 9. Quelle est la signature des constructeurs?
+ public Triangle()
+ public Triangle(double coteA, double coteB, double coteC)
 
 10. Parmi les méthodes, donnez le nom de tous les mutateurs?
+setCoteA, setCoteB et setCoteC. setCotes
 
 11. Parmi les méthodes donnez le nom de tous les accesseurs?
+getCoteA, getCoteB, getCoteC. estValide(), estEquilateral, ..., aire, perimetre
 
 12. Rédigez la documentation complète de "périmètre"
-    Ses paramètres explicites :
-    Son type de retour :
-    Une description courte de son rôle :
+    Ses paramètres explicites : Aucun
+    Son type de retour : double
+    Une description courte de son rôle : retourner le périmètre du triangle
 
 13. Rédigez la documentation complète de "aPartirDeACA"
-    Ses paramètres explicites :
-    Son type de retour :
-    Une description courte de son rôle :
+    Ses paramètres explicites : double angleA, double coteC, double angleB.
+                                Deux angles et leur côté adjacent
+    Son type de retour : Triangle
+    Une description courte de son rôle : Crée un nouveau triangle
+    avec les angles données (en radian) et leur côté adjacent
 
 14. Donnez la signature d'une méthode surchargée.
+private boolean estValide()
 
 15. Deux méthodes devraient être dans une autre classe. Elles n'ont pas rapport aux triangles, lesquelles?
+    aPeuPres et formatDouble
 
 16. Combien d'objets de type Triangle sont-ils créés pendant l'exécution du main?
+5 : L.19, L.22, L.30, L.33, L47
 
 17. Combien de variables de type Triangle sont-elles déclarées dans main?
+6 : desArpenteurs, iso, iso2, equilateral, rec, triangleUsager
 
 18. Combien de fois main appelle-t-elle un constructeur de Triangle?
+2 appels directs au constructeur dans le main. L.19, L.47
 
 19.	Programmez la fonction
     double hauteurA() // Retourne la hauteur au-dessus du cote a
+
+ base * hauteur / 2 = aire
+
 
 ----- Défis (facultatif) ------
 

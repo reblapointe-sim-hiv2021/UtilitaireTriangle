@@ -1,6 +1,7 @@
 package ca.cegepjonquiere.reblapointe;
 
 import java.text.DecimalFormat;
+import java.util.Objects;
 
 import static java.lang.Math.*;
 
@@ -53,7 +54,7 @@ public class Triangle {
     }
     
     public double perimetre(){
-        return coteA + coteB + coteC;
+        return this.coteA + this.coteB + this.coteC;
     }
 
     private boolean estValide(double coteA, double coteB, double coteC){
@@ -155,5 +156,22 @@ public class Triangle {
                  "C = " + String.format("%1$-" + PAD + "s", formatDouble(angleC()) + " (" + formatDouble(Math.toDegrees(angleC())) + "°)}") +
                 "\naire = " + formatDouble(aire()) + "   perimetre = " + formatDouble(perimetre()) + "\n" +
                 (estEquilateral() ? "équilatéral" : estIsocele() ? "isocèle" : "scalène") + (estRectangle() ? " rectangle" : "") + "\n";
+    }
+
+    public double hauteurA(){
+        return aire() / coteA * 2;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Triangle)) return false;
+        Triangle triangle = (Triangle) o;
+        return Double.compare(triangle.coteA, coteA) == 0 && Double.compare(triangle.coteB, coteB) == 0 && Double.compare(triangle.coteC, coteC) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(coteA, coteB, coteC);
     }
 }
