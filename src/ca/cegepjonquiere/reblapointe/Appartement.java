@@ -31,7 +31,7 @@ public class Appartement {
     public void setNbSallesDeBain(int nbSallesDeBain) {
         this.nbSallesDeBain = nbSallesDeBain;
     }
-
+    
     public double getLoyer() {
         return loyer;
     }
