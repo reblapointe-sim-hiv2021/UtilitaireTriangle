@@ -44,6 +44,6 @@ public class Appartement {
 
     public void ecrireAnnonce(){
         System.out.println("Appartement disponible, " + nbChambres + " chambre(s) et " + nbSallesDeBain +
-                " salle(s) de bain. Loyer de " + new DecimalFormat("#.##").format(loyer) + "$ par mois.");
+                " salle(s) de bain. Loyer de " + Math.round(loyer) + "$ par mois.");
     }
 }
