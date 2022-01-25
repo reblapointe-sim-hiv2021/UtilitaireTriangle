@@ -1,7 +1,5 @@
 package ca.cegepjonquiere.reblapointe;
 
-import java.text.DecimalFormat;
-
 public class Appartement {
     private int nbChambres;
     private int nbSallesDeBain;
