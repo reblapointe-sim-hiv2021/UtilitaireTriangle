@@ -7,6 +7,8 @@ public class Appartement {
     private int nbSallesDeBain;
     private double loyer;
 
+    public static double TAUX_DAUGMENTATION_MAXIMUM = 0.05;
+
     public Appartement() {
     }
 
