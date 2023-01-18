@@ -1,13 +1,32 @@
 package ca.cegepjonquiere.reblapointe;
 
 import java.util.Scanner;
+import java.util.regex.*;
 
-public class Main {
+public class Main extends Appartement {
 
     public static void main(String[] args) {
+
+    // CODE POSTAL ********************************************************
+        Pattern patronCodePostal = Pattern.compile("\\b([a-z]|[0-9])+@[a-z]([a-z]|[0-9])*\\.[a-z]([a-z]|[0-9])*\\b", Pattern.CASE_INSENSITIVE);
+        Scanner in = new Scanner(System.in);
+        System.out.println("Entrez un code postal");
+        String entree = in.nextLine();
+        Matcher matche = patronCodePostal.matcher(entree);
+
+        if(matche.find())
+            System.out.println("Merci! Code postal entré : " + matche.group());
+        else
+            System.out.println("Ceci n'est pas un code postal.");
+
+
         // Exercice sur les appartements
         Appartement apt = new Appartement(2,1,650);
         Appartement loft = new Appartement();
+
+
+
+
         loft.setLoyer(500);
         loft.setNbChambres(1);
         loft.setNbSallesDeBain(1);

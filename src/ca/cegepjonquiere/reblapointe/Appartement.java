@@ -5,10 +5,12 @@ public class Appartement {
     private int nbSallesDeBain;
     private double loyer;
 
-    public static double TAUX_DAUGMENTATION_MAXIMUM = 0.05;
+    public static final double TAUX_DAUGMENTATION_MAXIMUM = 0.05;
 
     public Appartement() {
     }
+
+
 
     public Appartement(int nbChambres, int nbSallesDeBain, double loyer) {
         this.nbChambres = nbChambres;
@@ -20,6 +22,10 @@ public class Appartement {
         return nbChambres;
     }
 
+    /**
+     * Set le nombre de chambres
+     * @param nbChambres
+     */
     public void setNbChambres(int nbChambres) {
         this.nbChambres = nbChambres;
     }
